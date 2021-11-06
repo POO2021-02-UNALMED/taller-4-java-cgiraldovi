@@ -5,7 +5,7 @@ public class Grupo {
     Persona[] estudiantes;
     Persona profesor;
     Asignatura asignatura;
-    final int codigo = 0;
+    int codigo = 0; //se elimino final
     String horario;
 
     Grupo(Persona[] estudiantes, Persona profesor, Asignatura asignatura, int codigo, String horario) {
@@ -17,8 +17,14 @@ public class Grupo {
     }
 
     Grupo(int cantidadEstudiantes, Persona profesor, Asignatura asignatura, int codigo, String horario) {
-        Persona[] personas = new Persona[cantidadEstudiantes];
-        this(personas, profesor, asignatura, codigo, horario);
+        this(new Persona[0], profesor, asignatura, codigo, horario);
+        /*
+        * - se movio para estar en la primera parte del constructor
+        * - se elimino la variable llamada "personas", se puso en cambio una nueva lista de Personas que luego
+        * va a ser reemplazada
+        * */
+
+        this.estudiantes = new Persona[cantidadEstudiantes];
     }
 
     Grupo(Persona[] estudiantes, Persona profesor, Asignatura asignatura) {

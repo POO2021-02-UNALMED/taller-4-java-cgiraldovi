@@ -2,13 +2,19 @@ package classroom;
 
 public class Persona {
 
-    final long cedula;
+    long cedula; //se elimino el atributo final
     String nombre;
     static int totalPersonas;
-    
+
     static {
         totalPersonas = 0;
-        cedula = 3;
+        //se elimino el atributo cedula
+    }
+
+    //se agrega el constructor sin argumentos
+
+    Persona(){
+
     }
 
     Persona(long cedula, String nombre) {
@@ -34,15 +40,15 @@ public class Persona {
         totalPersonas++;
     }
     
-    long getCedula() {
+    public long getCedula() {
         return cedula;
-    }
+    } //se agrego public
 
-    String getNombre() {
+    public String getNombre() {
         return nombre;
-    }
+    } //se agrego public
 
-    void setNombre(String nombre) {
+    public void setNombre(String nombre) {
         this.nombre = nombre;
-    }
+    } //se agrego public
 }

@@ -38,7 +38,7 @@ public class Asignatura {
 
     void cambiarDatos(int codigoInterno) {
         this.codigoInterno = codigoInterno;
-    }
+    } //se cambio int por long
 
     void cambiarDatos(int codigoExterno) {
         this.codigoExterno = codigoExterno;
